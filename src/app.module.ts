@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+// import { HandsomeModule } from './handsome/handsome.module';
 
 @Module({
   imports: [],
@@ -8,8 +9,8 @@ import { AppService } from './app.service';
   providers: [
     AppService,
     {
-      provide: 'ALIAS_APP_SERVICE',
-      useExisting: AppService,
+      provide: 'HANDSOME_MAN',
+      useValue: 'HAO',
     },
   ],
 })
